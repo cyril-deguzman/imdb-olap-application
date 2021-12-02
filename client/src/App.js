@@ -11,6 +11,7 @@ import {
 import { Bar } from 'react-chartjs-2';
 
 import './assets/styles/App.css';
+import ChartService from './services/ChartService'
 
 ChartJS.register(
   CategoryScale,
@@ -59,10 +60,21 @@ export default class App extends Component {
     super(props);
 
     this.state = {
-
+      data: [],
     };
   }
 
+  componentDidMount() {
+    ChartService.getSampleData()
+      .then((res) => {
+        const result = res.data
+        console.log(result);
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+  }
+  
   render() {
     return (
       <div className="container">

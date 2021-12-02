@@ -14,14 +14,15 @@ const db = {
 
     this.connection.connect(function(err){
       if(err) throw err;
-      console.log("connected!");
+      console.log("connected to mysql uwu!");
     })
   },
 
-  query: (sql) => {
+  query: (sql, callback) => {
     this.connection.query(sql, (err, result) => {
       if (err) throw err;
       console.log("Result: ", result);
+      return callback(result);
     })
   },
 }
