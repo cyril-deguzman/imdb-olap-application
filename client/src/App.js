@@ -1,25 +1,73 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+} from 'chart.js';
+import { Bar } from 'react-chartjs-2';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import './assets/styles/App.css';
 
-export default App;
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend
+);
+
+export const options = {
+  responsive: true,
+  plugins: {
+    legend: {
+      position: 'top',
+    },
+    title: {
+      display: true,
+      text: 'Chart.js Bar Chart',
+    },
+  },
+};
+
+const labels = ['2010', '2020'];
+const maleCount = [3000, 2399];
+const femaleCount = [1000, 2872];
+
+export const data = {
+  labels,
+  datasets: [
+    {
+      label: 'Male',
+      data: maleCount,
+      backgroundColor: 'rgba(53, 162, 235, 0.5)',
+    },
+    {
+      label: 'Female',
+      data: femaleCount,
+      backgroundColor: 'rgba(255, 99, 132, 0.5)',
+    },
+  ],
+};
+
+export default class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+
+    };
+  }
+
+  render() {
+    return (
+      <div className="container">
+        <Bar options={options} data={data} />;
+      </div>
+    );
+  }
+};

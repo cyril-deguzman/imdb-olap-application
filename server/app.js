@@ -9,6 +9,7 @@ const port = 3000;
 app.use(express.static(path.resolve(__dirname, 'build')));
 
 db.connect();
+db.query("SELECT count(*) AS total_count FROM fact_table");
 
 app.use("/", routes);
 
