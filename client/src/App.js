@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './assets/styles/App.css';
-import ChartService from './services/ChartService'
+
 import BarChart from './components/BarChart'
 
 export default class App extends Component {
@@ -15,14 +15,7 @@ export default class App extends Component {
   }
 
   componentDidMount() {
-    ChartService.getSampleData()
-      .then((res) => {
-        const result = res.data
-        console.log(result);
-      })
-      .catch((err) => {
-        console.log(err);
-      })
+    
   }
   
   render() {
