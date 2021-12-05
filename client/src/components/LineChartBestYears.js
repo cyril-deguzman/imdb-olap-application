@@ -39,14 +39,14 @@ const initData = {
   datasets: [
     {
       label: 'Male',
-      data: [{y: 20, x: '1890', z: 'boy'}, {y: 10, x: '1891', person: 'boy2'}],
+      data: [{y: 0, x: 'loading.'}, {y: 0, x: 'loading..'}],
       fill: true,
       backgroundColor: "rgba(75,192,192,0.2)",
       borderColor: "rgba(75,192,192,1)"
     },
     {
       label: '1Male',
-      data: [{y: 120, x: '1890', z: 'boy'}, {y: 110, x: '1891', person: 'boy2'}],
+      data: [{y: 0, x: 'loading....'}, {y: 0, x: 'loading...'}],
       fill: false,
       borderColor: "#742774"
     }

@@ -24,10 +24,10 @@ const initData = {
   labels: ['Action', 'Adventure', 'Comedy', 'Crime', 'Drama', 'Film-Noir', 'Horror', 'Mystery', 'Romance', 'Thriller', 'War', 'Western'],
   datasets: [
     {
-      label: 'Loading uwu',
-      data: [1,2,3,1,2,3,1,2,3,1,2,3],
-      backgroundColor: 'rgba(255, 99, 132, 0.2)',
-      borderColor: 'rgba(255, 99, 132, 1)',
+      label: 'Loading....',
+      data: [0,0,0,0,0,0,0,0,0,0,0,0],
+      backgroundColor: 'rgba(76, 0, 112, 0.5)',
+      borderColor: 'rgba(50,62,66)',
       borderWidth: 1,
     },
   ],
@@ -47,8 +47,8 @@ const RadarChartDirGenre = () => {
           ...data,
           datasets: [{
             label: 'Genres',
-            backgroundColor: '#323E42',
-            borderColor: '#EFDCF9',
+            backgroundColor: 'rgba(76, 0, 112, 0.5)',
+            borderColor: 'rgba(50,62,66)',
             data: result.map(row => row.y), 
             borderWidth: 2
           }],

@@ -36,13 +36,13 @@ const options = {
 const initData = {
   datasets: [
     {
-      label: 'Male',
-      data: [{y: 20, x: '1890', z: 'boy'}, {y: 10, x: '1891', person: 'boy2'}],
+      label: 'loading....',
+      data: [{y: 0, x: 'loading.'}, {y: 0, x: 'loading...'}],
       backgroundColor: 'rgba(1, 24, 61, 0.6)',
     },
     {
-      label: 'Female',
-      data: [{y: 30, x: '1890', person: 'girl'}, {y: 20, x: '1893', person: 'girl2'}],
+      label: 'loading..',
+      data: [{y: 0, x: 'loading..'}, {y: 0, x: 'loading....'}],
       backgroundColor: 'rgba(102, 6, 99, 0.6)',
     },
   ],

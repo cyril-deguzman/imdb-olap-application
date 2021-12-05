@@ -37,12 +37,12 @@ const initData = {
   datasets: [
     {
       label: 'Loading',
-      data: [{y: 20, x: 'Loading'}, {y: 10, x: 'Loading..'}],
+      data: [{y: 0, x: 'Loading'}, {y: 0, x: 'Loading..'}],
       backgroundColor: 'rgba(1, 24, 61, 0.6)',
     },
     {
       label: 'Loading.',
-      data: [{y: 30, x: 'Loading..'}, {y: 20, x: 'Loading..'}],
+      data: [{y: 0, x: 'Loading..'}, {y: 0, x: 'Loading..'}],
       backgroundColor: 'rgba(102, 6, 99, 0.6)',
     },
   ],
