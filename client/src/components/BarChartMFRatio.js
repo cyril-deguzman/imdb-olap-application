@@ -79,7 +79,7 @@ const BarChartMFRatio = () => {
 
   return (
     <>
-      <h1><b>MALE TO FEMALE RATIO OVER THE DECADES</b></h1>
+      <h1><b>Male to Female ratio over the decades</b></h1>
       <div className="container" style={{width: '70%', marginTop: 50, marginLeft: 'auto', marginRight: 'auto' }}>
         <Bar options={options} data={data} />
       </div>

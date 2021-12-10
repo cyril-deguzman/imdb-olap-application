@@ -38,14 +38,14 @@ const options = {
 const initData = {
   datasets: [
     {
-      label: 'Male',
+      label: 'Loading',
       data: [{y: 0, x: 'loading.'}, {y: 0, x: 'loading..'}],
       fill: true,
       backgroundColor: "rgba(75,192,192,0.2)",
       borderColor: "rgba(75,192,192,1)"
     },
     {
-      label: '1Male',
+      label: 'Loading..',
       data: [{y: 0, x: 'loading....'}, {y: 0, x: 'loading...'}],
       fill: false,
       borderColor: "#742774"

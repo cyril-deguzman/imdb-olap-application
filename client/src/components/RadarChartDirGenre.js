@@ -62,7 +62,7 @@ const RadarChartDirGenre = () => {
 
   return (
     <>
-      <h1><b>Director x’s avg ranking per genres</b></h1>
+      <h1><b>Director Robert Aldrich's average ranking per genres</b></h1>
       <div className="container" style={{width: '40%', marginTop: 50, marginLeft: 'auto', marginRight: 'auto' }}>
         <Radar data={data} />
       </div>

@@ -19,14 +19,15 @@ import './assets/styles/App.css';
 
 const { Header, Content, Footer, Sider } = Layout;
 
-class App extends Component {
+class App extends Component { 
   state = {
     collapsed: false,
   };
 
   onCollapse = collapsed => {
-    console.log(collapsed);
     this.setState({ collapsed });
+
+    if(collapsed);
   };
 
   render() {
@@ -34,14 +35,14 @@ class App extends Component {
     return (
         <Layout style={{ minHeight: '100vh' }}>
           <Sider collapsible collapsed={collapsed} onCollapse={this.onCollapse}>
-            <div className="logo" />
+            <div id="logo"><p>IMDb Analysis</p></div>
             <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
               <Menu.Item key="1" icon={<LineChartOutlined />}>
                 Best Years
                 <Link to="/Line"/>
               </Menu.Item>
               <Menu.Item key="2" icon={<RadarChartOutlined />}>
-                Director x’s avg ranking per genre
+                Genre Radar
                 <Link to="/Radar"/>
               </Menu.Item>
               <Menu.Item key="3" icon={<BarChartOutlined />}>
@@ -59,7 +60,6 @@ class App extends Component {
             </Menu>
           </Sider>
           <Layout className="site-layout">
-            <Header className="site-layout-background" style={{ padding: 0 }} />
             <Content style={{ margin: '0 16px' }}>
               <Breadcrumb style={{ margin: '16px 0' }}>
                 <Breadcrumb.Item><b>STADVDB</b></Breadcrumb.Item>
@@ -75,7 +75,7 @@ class App extends Component {
                   </Routes>
               </div>
             </Content>
-            <Footer style={{ textAlign: 'center' }}>kawaii pochi uwu 2021</Footer>
+            <Footer style={{ textAlign: 'center' }}>© 2021 cyrilethan-deguzman</Footer>
           </Layout>
         </Layout>
       
