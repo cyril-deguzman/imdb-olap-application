@@ -56,8 +56,10 @@ const BarChartTopMusic = () => {
     
     ChartService.getTopMusic()
       .then((res) => {
-        const result = res.data
+        let result = res.data
         console.log(result);
+
+        result.sort((a, b) => parseFloat(a.y) - parseFloat(b.y));
         setData({
           datasets: [
             {
